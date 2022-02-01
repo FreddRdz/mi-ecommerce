@@ -21,8 +21,12 @@ app.get("/products", (req, res) => {
   res.render("product");
 });
 // PRODUCT/:ID
-app.get("/products/id", (req, res) => {
-  res.render("product");
+app.get("/products/:id", (req, res) => {
+  let productID = req.params.productID;
+
+  require("fs").readFileSync();
+
+  res.render("pages.product", { productID });
 });
 
 // CART
