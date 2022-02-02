@@ -6,96 +6,83 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/css/styles.css" />
     <link rel="stylesheet" href="/css/product.css" />
+    <link rel="stylesheet" href="/css/home.css" />
     <link rel="stylesheet" href="/css/header.css" />
-    <title>Producto</title>
+    <title>Pagina de error</title>
   </head>
   <body>
     <%- include("../partials/header")%>
+    <main>
+     
+      <h1 style="text-align: center; margin-top: 60px;"> <%= locals.productID ? productID : "ERROR NOT FOUND"  %> </h1>
 
-    <section class="text-opciones">
-      <p class="text-te-puede-interesar">También te puede interesar</p>
-    </section>
-    <section class="lista-productos">
-      <div class="contenedor-producto">
-        <img
-          src="/images (1).jpeg"
-          alt="whiskey jack"
-          class="producto-img"
-        />
-        <div class="etiqueta">
-          <p class="nombre">Coca Cola Lata 220mL Pack Original x8</p>
-          <div class="contenedor-puntos">
-            <p class="puntos">760</p>
-            <p class="leyenda">PUNTOS</p>
+      <p style="text-align: center;">error pagina no encontrada</p>
+
+      <div class="contenedor-productos">
+        <h3 class="titulo1">Te puede interesar</h3>
+        <div class="contenedor-producto">
+          <img
+            src="/assets/images (2).jpeg"
+            alt="whiskey jack"
+            class="producto-img"
+          />
+          <div class="etiqueta">
+            <p class="nombre">Whiskey Jack Daniels Honey 750ml</p>
+            <div class="contenedor-puntos">
+              <p class="puntos">19.900</p>
+              <p class="leyenda">PUNTOS</p>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="contenedor-producto">
-        <img
-          src="/images (1).jpeg"
-          alt="whiskey jack"
-          class="producto-img"
-        />
-        <div class="etiqueta">
-          <p class="nombre">NOMBRE DEL PRODUCTO O SERVICIO</p>
-          <div class="contenedor-puntos">
-            <p class="puntos">XX.XXX</p>
-            <p class="leyenda">PUNTOS</p>
+        <div class="contenedor-producto">
+          <img
+            src="/assets/images (2).jpeg"
+            alt="whiskey jack"
+            class="producto-img"
+          />
+          <div class="etiqueta">
+            <p class="nombre">NOMBRE DEL PRODUCTO O SERVICIO</p>
+            <div class="contenedor-puntos">
+              <p class="puntos">XX.XXX</p>
+              <p class="leyenda">PUNTOS</p>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="contenedor-producto">
-        <img
-          src="/images (1).jpeg"
-          alt="whiskey jack"
-          class="producto-img"
-        />
-        <div class="etiqueta">
-          <p class="nombre">NOMBRE DEL PRODUCTO O SERVICIO</p>
-          <div class="contenedor-puntos">
-            <p class="puntos">XX.XXX</p>
-            <p class="leyenda">PUNTOS</p>
+        <div class="contenedor-producto">
+          <img
+            src="/assets/images (2).jpeg"
+            alt="whiskey jack"
+            class="producto-img"
+          />
+          <div class="etiqueta">
+            <p class="nombre">NOMBRE DEL PRODUCTO O SERVICIO</p>
+            <div class="contenedor-puntos">
+              <p class="puntos">XX.XXX</p>
+              <p class="leyenda">PUNTOS</p>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="contenedor-producto">
-        <img
-          src="/images (1).jpeg"
-          alt="whiskey jack"
-          class="producto-img"
-        />
-        <div class="etiqueta">
-          <p class="nombre">NOMBRE DEL PRODUCTO O SERVICIO</p>
-          <div class="contenedor-puntos">
-            <p class="puntos">XX.XXX</p>
-            <p class="leyenda">PUNTOS</p>
+        <div class="contenedor-producto">
+          <img
+            src="/assets/images (2).jpeg"
+            alt="whiskey jack"
+            class="producto-img"
+          />
+          <div class="etiqueta">
+            <p class="nombre">NOMBRE DEL PRODUCTO O SERVICIO</p>
+            <div class="contenedor-puntos">
+              <p class="puntos">XX.XXX</p>
+              <p class="leyenda">PUNTOS</p>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
-  </div>
-</main>
-<footer>
-  <div class="social-media">
-    <img src="/twitter.svg" alt="Logotipo" class="grupo1" />
-    <img src="/facebook.svg" alt="Logotipo" class="grupo1" />
-    <img src="/instagram.svg" alt="Logotipo" class="grupo1" />
-    <img src="/youtube.svg" alt="Logotipo" class="grupo1" />
-  </div>
-  <div class="derechos">
-    <p class="Derechos">
-      &copy; MiEcommerce. Todos los derechos reservados
-    </p>
-  </div>
-  <div class="tiendas">
-    <img src="/Apple.svg" alt="Logotipo" class="grupo2" />
-    <p class="TextoFooter">App Store</p>
-    <img src="/Google-play.svg" alt="Logotipo" class="grupo2" />
-    <p class="TextoFooter">Google Play</p>
-  </div>
-</footer>
+
+        
+    </main>
+    <%- include("../partials/footer")%>
+
 </body>
 </html>
