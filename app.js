@@ -20,6 +20,7 @@ app.get("/", (req, res) => {
 app.get("/products", (req, res) => {
   res.render("product");
 });
+
 // PRODUCT/:ID
 app.get("/products/:productID", (req, res) => {
   let productID = req.params.productID;
