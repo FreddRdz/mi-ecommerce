@@ -1,3 +1,7 @@
+html {
+  height: 100%;
+}
+
 .bigWord {
   padding-left: 183px;
   font-size: 100px;
