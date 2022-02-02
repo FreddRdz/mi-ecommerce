@@ -25,8 +25,6 @@ app.get("/products", (req, res) => {
 app.get("/products/:productID", (req, res) => {
   let productID = req.params.productID;
 
-  
-
   res.render("product_error.ejs", { productID });
 });
 
