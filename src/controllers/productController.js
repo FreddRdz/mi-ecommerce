@@ -6,18 +6,16 @@ module.exports = {
   findProductById: (req, res) => {},
   findProductsRelatedById: (req, res) => {},
 
-  //PRODUCTOS SUGERIDOS
+  //PRODUCTOS SUGERIDOS//                 /products/api/product/suggested
   findProductsSuggested: async (req, res) => {
     fetch("https://dhfakestore.herokuapp.com/api/products")
       .then((response) => response.json())
-      .then((productosSugeridos) => {
-        return res.render("product", { productosSugeridos });
+      .then((data) => {
+        let productosSugeridos = [data[0], data[1], data[2], data[3], data[4]];
+        return res.render("product", {
+          productosSugeridos,
+        });
       });
-    // let id = req.params.id;
-
-    // const productosSugeridos = products.find((product) => product.id == id);
-
-    // productosSugeridos = res.render("product", { product: productosSugeridos });
   },
   findProductsMostWanted: (req, res) => {},
 };
