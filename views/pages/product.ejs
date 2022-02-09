@@ -85,37 +85,23 @@
           <p class="text-te-puede-interesar">También te puede interesar</p>
         </section>
         <section class="lista-productos">
+          <% productosSugeridos.forEach(product => { %>
           <div class="contenedor-producto">
             <img
-              src="/assets/images (1).jpeg"
+              src="<%= product.image %>"
               alt="whiskey jack"
               class="producto-img"
             />
             <div class="etiqueta">
-              <p class="nombre">Coca Cola Lata 220mL Pack Original x8</p>
+              <p class="nombre"><%= product.title %></p>
               <div class="contenedor-puntos">
-                <p class="puntos">760</p>
+                <p class="puntos"><%= product.price %></p>
                 <p class="leyenda">PUNTOS</p>
               </div>
             </div>
           </div>
-
-          <div class="contenedor-producto">
-            <img
-              src="/assets/images (1).jpeg"
-              alt="whiskey jack"
-              class="producto-img"
-            />
-            <div class="etiqueta">
-              <p class="nombre">NOMBRE DEL PRODUCTO O SERVICIO</p>
-              <div class="contenedor-puntos">
-                <p class="puntos">XX.XXX</p>
-                <p class="leyenda">PUNTOS</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="contenedor-producto">
+          <% }) %>
+          <!-- <div class="contenedor-producto">
             <img
               src="/assets/images (1).jpeg"
               alt="whiskey jack"
@@ -144,6 +130,21 @@
               </div>
             </div>
           </div>
+
+          <div class="contenedor-producto">
+            <img
+              src="/assets/images (1).jpeg"
+              alt="whiskey jack"
+              class="producto-img"
+            />
+            <div class="etiqueta">
+              <p class="nombre">NOMBRE DEL PRODUCTO O SERVICIO</p>
+              <div class="contenedor-puntos">
+                <p class="puntos">XX.XXX</p>
+                <p class="leyenda">PUNTOS</p>
+              </div>
+            </div>
+          </div> -->
         </section>
         <%- include("../partials/menu")%>
       </div>
