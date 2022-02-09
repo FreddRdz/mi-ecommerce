@@ -27,7 +27,7 @@ app.use("/cart", cartRoute);
 
 // // PRODUCTS
 // app.get("/products", (req, res) => {
-//   res.render("product");
+// res.render("product");
 // });
 // // PRODUCT/:ID
 // app.get("/products/:productID", (req, res) => {
@@ -42,8 +42,8 @@ app.use("/cart", cartRoute);
 // });
 
 // CHECKOUT
-app.get("/checkout", (req, res) => {
-  res.render("checkout");
+app.get("*", function (req, res) {
+  res.status(404).render("checkout");
 });
 
 //Servidor
