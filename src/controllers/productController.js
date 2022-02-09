@@ -3,6 +3,7 @@ const fetch = require("node-fetch");
 const { response } = require("express");
 
 module.exports = {
+  //            /products/api/product/                  //
   findProducts: (req, res) => {
     fetch("https://dhfakestore.herokuapp.com/api/products")
       .then((response) => response.json())
@@ -11,6 +12,8 @@ module.exports = {
       });
   },
   findProductById: (req, res) => {},
+
+  //        /api/products/:id             //
   findProductsRelatedById: (req, res) => {
     let id = req.params.id;
 
@@ -27,18 +30,30 @@ module.exports = {
 
   findProductById: (req, res) => {},
 
-  //PRODUCTOS SUGERIDOS//                 /products/api/product/suggested
+  //PRODUCTOS SUGERIDOS//              //url para esta función =>   /products/api/product/suggested
   findProductsSuggested: async (req, res) => {
-    fetch("https://dhfakestore.herokuapp.com/api/products")
-      .then((response) => response.json())
-      .then((data) => {
-        let productosSugeridos = [data[0], data[1], data[2], data[3], data[4]];
-        return res.render("product", {
-          productosSugeridos,
-        });
-      });
+    let url = "https://dhfakestore.herokuapp.com/api/products";
+    fetch(url);
+    let response = await fetch(url);
+    let data = await response.json();
+
+    // Código que trae los productos con valor True  //
+    let trueSuggested = await data.filter((data) => data.mostwanted == true);
+    console.log(trueSuggested);
+
+    trueSuggested = [
+      trueSuggested[0],
+      trueSuggested[1],
+      trueSuggested[2],
+      trueSuggested[3],
+      trueSuggested[4],
+    ];
+    return res.render("product", {
+      trueSuggested,
+    });
   },
 
+  //          /api/products/:id/related         //
   findProductsRelatedById: (req, res) => {
     let id = req.params.id;
 

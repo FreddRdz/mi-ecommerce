@@ -85,7 +85,8 @@
           <p class="text-te-puede-interesar">También te puede interesar</p>
         </section>
         <section class="lista-productos">
-          <% productosSugeridos.forEach(product => { %>
+          <!-- PRODUCTOS SUGUERIDOS, SOLAMENTE LOS QUE TIENE VALOR TRUE -->
+          <% trueSuggested.forEach(product => { %>
           <div class="contenedor-producto">
             <img
               src="<%= product.image %>"
