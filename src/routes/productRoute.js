@@ -10,6 +10,7 @@ router.get(
   productController.findProductsRelatedById
 );
 router.get("/api/product/suggested", productController.findProductsSuggested);
+router.get("/products", productController.getAllProducts);
 router.get(
   "/api/products/mostWanted",
   productController.findProductsMostWanted
