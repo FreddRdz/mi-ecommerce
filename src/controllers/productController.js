@@ -39,7 +39,6 @@ module.exports = {
 
     // Código que trae los productos con valor True  //
     let trueSuggested = await data.filter((data) => data.mostwanted == true);
-    console.log(trueSuggested);
 
     trueSuggested = [
       trueSuggested[0],
