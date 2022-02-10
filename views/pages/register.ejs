@@ -39,7 +39,7 @@
               />
               <% if (locals.errors && errors.password) { %>
               <div class="text-dangerContraseña" style="color: red">
-                <%= errors.contraseña.msg %>
+                <%= errors.password.msg %>
               </div>
               <% } %>
 
@@ -60,7 +60,7 @@
           </div>
           <div class="text-no-cuenta">
             <p class="tienes-cuenta">¿No tienes cuenta?</p>
-            <a href="/login" class="text-login">Inicia Sesión</a>
+            <a href="/users/login" class="text-login">Inicia Sesión</a>
           </div>
         </div>
       </div>

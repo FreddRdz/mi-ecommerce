@@ -2,9 +2,9 @@ const fetch = require("node-fetch");
 // let products = require("../database/products");
 const { response } = require("express");
 const { includes } = require("../middlewares/validarLoginMiddleware");
+const ProductModel = require("../models/ProductModel");
 
 module.exports = {
-  //            /products/api/product/                  //
   findProducts: (req, res) => {
     fetch("https://dhfakestore.herokuapp.com/api/products")
       .then((response) => response.json())
@@ -12,24 +12,12 @@ module.exports = {
         return res.render("product", { productosSugeridos });
       });
   },
-  findProductById: (req, res) => {},
 
-  //        /api/products/:id             //
-  findProductsRelatedById: (req, res) => {
-    let id = req.params.id;
-
-    fetch("https://dhfakestore.herokuapp.com/api/products/" + id)
-      .then((response) => response.json())
-      .then((producto) => {
-        fetch("https://fakestoreapi.com/products/category/" + producto.category)
-          .then((response) => response.json())
-          .then((productosSugeridos) => {
-            return res.render("product", { productosSugeridos });
-          });
-      });
+  findProductById: async (req, res) => {
+    let idProduct = req.params.id;
+    const productToShow = await ProductModel.filterProductById(idProduct);
+    res.render("productId", { productToShow });
   },
-
-  findProductById: (req, res) => {},
 
   //PRODUCTOS SUGERIDOS//              //url para esta función =>   /products/api/product/suggested
   findProductsSuggested: async (req, res) => {
@@ -54,6 +42,30 @@ module.exports = {
   },
 
   //******** TODOS LOS PRODUCTOS  ***************// // url =>   /products/products
+  //          /api/products/:id/related         //
+  findProductsRelatedById: async (req, res) => {
+    let productosSugeridos = [];
+    let id = req.params.id;
+    console.log(id);
+    let url =
+      "http://dhfakestore.herokuapp.com/api/products/" + id + "/related";
+    fetch(url)
+      .then((response) => response.json())
+      .then((data) => {
+        let productosRelacionados = [];
+        console.log(data);
+        for (let index = 0; index <= 4; index++) {
+          if (data.length > index) {
+            productosRelacionados.push(data[index]);
+          }
+        }
+        console.log(productosRelacionados);
+        return res.render("productRelated", {
+          productosRelacionados,
+          productosSugeridos,
+        });
+      });
+  },
   getAllProducts: async (req, res) => {
     let url = "https://dhfakestore.herokuapp.com/api/products";
     fetch(url);
