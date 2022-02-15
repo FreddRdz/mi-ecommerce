@@ -34,5 +34,10 @@
   "email": "1234r@gmail.com",
   "password": "$2a$10$e7dZ54fzLPjvvQZGLIOLCOUJ.2pNhgEN.2PNGD8z99Upu9aVc6.uS",
   "Repitepassword": "12345678"
+ },
+ {
+  "email": "12345r@gmail.com",
+  "password": "$2a$10$q5vAQi9qE7VpiNtOTswzIuIaG35ykwWikjnAirWjFOF.KjH6Jgpa.",
+  "Repitepassword": "12345678"
  }
 ]
