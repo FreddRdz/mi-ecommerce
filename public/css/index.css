@@ -1,0 +1,285 @@
+/* Product card styles */
+main {
+  margin-top: 70px;
+}
+
+.container-interes {
+  display: flex;
+  margin-top: 100px;
+  flex-direction: column;
+  margin: 10px 100px 0 100px;
+}
+
+.contenedor-productos {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: 20px;
+}
+
+.contenedor-producto {
+  background-color: #fff;
+  margin: 15px 0 15px 0;
+  padding: 10px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 220px;
+}
+.contenedor-producto > img,
+.contenedor-producto > a > img {
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+}
+
+/* Estilos Menu */
+.menu {
+  margin: 10px 100px 10px 100px;
+  border-radius: 16px;
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  height: auto;
+  background: rgb(52, 55, 56);
+}
+
+.menu > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px 0 10px 0;
+  padding: 0 10px 0 10px;
+  border-right: 2px #fff solid;
+  width: 12.5%;
+}
+
+.menu > div:last-child {
+  border-right: none;
+}
+
+.menu > div > i {
+  display: flex;
+  justify-content: center;
+}
+
+.menu > div > p {
+  color: #fff;
+  padding: 0 0 0 5px;
+  font-size: 14px;
+}
+
+.ico {
+  font-size: 20px;
+  color: #ffffff;
+}
+
+.link {
+  text-decoration: none;
+  color: #000;
+}
+
+/* Estilos anuncios */
+
+.anuncios {
+  padding: 40px 0 20px 0;
+}
+
+.anuncios-container {
+  height: 320px;
+  background-color: rgba(12, 176, 147, 1);
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.disney {
+  background-image: url("/assets/disneybg.jpg");
+}
+
+.hbo {
+  background-image: url("/assets/hbobg.jpg");
+}
+
+.televisoras-container {
+  bottom: 80px;
+  height: 264px;
+  width: 500px;
+  background-size: cover;
+  border-radius: 18px;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+}
+
+.anuncios-container-televisoras {
+  display: flex;
+  gap: 20px;
+  top: 50px;
+  position: absolute;
+}
+
+.container-info {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  background: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 1));
+  border-radius: 18px;
+  width: 100%;
+}
+
+.brand {
+  width: 100px;
+  border-radius: 8px;
+}
+
+.info-container {
+  margin-left: 15px;
+}
+
+.text-info {
+  color: white;
+  font-size: 16px;
+}
+
+.text-info-bold {
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+@media (max-width: 600px) {
+  .contenedor-productos {
+    row-gap: 0;
+  }
+
+  .container-interes {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 20px 0 20px;
+  }
+
+  .contenedor-producto {
+    background-color: #fff;
+    margin: 15px 0 15px 0;
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .contenedor-producto > a {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .contenedor-producto > img,
+  .contenedor-producto > a > img {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+  }
+
+  .etiqueta {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .contenedor-puntos {
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .nombre,
+  .puntos {
+    font-weight: bold;
+    font-size: 18px;
+  }
+
+  .leyenda {
+    font-size: 12px;
+    color: rgba(153, 153, 153, 1);
+  }
+
+  main {
+    margin-top: 70px;
+    display: block;
+  }
+
+  .menu {
+    margin: 10px 20px 0 20px;
+    border-radius: 16px;
+    padding: 16px;
+    display: block;
+    flex-direction: row;
+    height: auto;
+    background: rgb(52, 55, 56);
+  }
+
+  .menu > div {
+    display: flex;
+    margin: 10px 0 10px 0;
+    flex-direction: row;
+    border-right: none;
+    width: 100%;
+  }
+
+  .menu > div > i {
+    width: 10%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .menu > div > p {
+    width: 90%;
+    color: #fff;
+    padding: 0 0 0 5px;
+
+    text-align: none;
+  }
+
+  .ico {
+    font-size: 20px;
+    color: #ffffff;
+  }
+
+  .anuncios {
+    padding: 100px 0 160px 0;
+  }
+  .anuncios-container {
+    top: 10px;
+  }
+  .anuncios-container-televisoras {
+    top: 10px;
+  }
+}
+
+@media (max-width: 1035px) {
+  .televisoras-container {
+    width: 400px;
+  }
+}
+
+@media (max-width: 850px) {
+  .televisoras-container {
+    width: 275px;
+  }
+}
+
+@media (max-width: 600px) {
+  .televisoras-container {
+    width: 400px;
+  }
+  .anuncios-container-televisoras {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+  }
+}

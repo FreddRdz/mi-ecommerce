@@ -14,6 +14,10 @@
 
 /* MAIN */
 
+.main-container {
+  height: 90vh;
+}
+
 .background-login-aqua {
   width: 100%;
   background-color: rgba(12, 176, 147, 1);

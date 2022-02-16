@@ -4,13 +4,19 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/footer-abajo.css" />
+    <link rel="stylesheet" href="/css/provisional.css" />
     <link rel="stylesheet" href="/css/product.css" />
+    <link rel="stylesheet" href="/css/index.css" />
     <link rel="stylesheet" href="/css/header.css" />
     <script
       src="https://kit.fontawesome.com/4070a3aa63.js"
       crossorigin="anonymous"
     ></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
     <title>Producto</title>
   </head>
   <body>
@@ -84,7 +90,7 @@
         <section class="text-opciones">
           <p class="text-te-puede-interesar">También te puede interesar</p>
         </section>
-        <section class="lista-productos">
+        <div class="lista-productos">
           <!-- PRODUCTOS SUGUERIDOS, SOLAMENTE LOS QUE TIENE VALOR TRUE -->
           <% trueSuggested.forEach(product => { %>
           <div class="contenedor-producto">
@@ -102,9 +108,9 @@
             </div>
           </div>
           <% }) %>
-        </section>
-        <%- include("../partials/menu")%>
+        </div>
       </div>
+      <%- include("../partials/menu")%>
     </main>
 
     <footer>
