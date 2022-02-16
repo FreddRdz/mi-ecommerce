@@ -7,7 +7,7 @@ window.addEventListener('load', function(){
   let errores = [];
   let mostrarErrores = document.querySelector(".errores ul");
   let botonFormulario = document.querySelector(".button-login")
-  let body = document.querySelector("body")
+  
   let botonEntendido = document.querySelector(".botonMensaje")
   
 
