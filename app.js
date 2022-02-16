@@ -34,10 +34,11 @@ app.use("/", productRoute);
 app.use("/", storeRoute);
 app.use("/", cartRoute);
 
-// CHECKOUT
-app.get("*", function (req, res) {
-  res.status(404).render("pagenotfound");
-});
+//Checkout
+app.get("/checkout", (req, res) => res.render("checkout"));
+
+// Page not found
+app.get("*", (req, res) => res.status(404).render("pagenotfound"));
 
 //Servidor
 app.listen(PORT, () => {
