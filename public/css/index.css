@@ -353,6 +353,55 @@ main {
   height: 25px;
 }
 
+/*Modo oscuro para dropdown*/
+.darkdropdown {
+  background-color: #000;
+  color: white;
+  border-color: white;
+}
+
+/*Modo oscuro para producto detalle*/
+.darkproduct {
+  background-color: rgba(73, 79, 81, 1);
+  color: white;
+}
+
+.darkbtnaddcart {
+  border-color: white;
+  border-style: solid;
+  border-width: thin;
+}
+
+/*Modo oscuro para lista de productos*/
+.darklistproduct {
+  background-color: rgba(73, 79, 81, 1);
+  color: white;
+}
+
+/*Modo oscuro para carrito*/
+.darkcart {
+  background-color: black;
+  color: white;
+}
+
+.darkcontainerproduct {
+  background-color: rgba(73, 79, 81, 1);
+  color: white;
+}
+
+.darkbtnquitar {
+  background-color: black;
+}
+
+.darkquantity {
+  background-color: black;
+  color: white;
+}
+
+.darkaplicar {
+  background-color: rgba(73, 79, 81, 1);
+}
+
 @media (max-width: 1035px) {
   .televisoras-container {
     width: 400px;
