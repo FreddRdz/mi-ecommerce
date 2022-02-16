@@ -71,8 +71,9 @@ header {
   background: rgba(12, 176, 147, 1);
 }
 
-.buttons {
+.dropdownbtn {
   border: none;
+  position: static;
   border-style: none;
   cursor: pointer;
   width: auto;
@@ -83,7 +84,7 @@ header {
   color: rgba(255, 255, 255, 1);
 }
 
-.buttons:hover {
+.dropdownbtn:hover {
   background: rgba(12, 176, 147, 1);
 }
 
@@ -379,4 +380,79 @@ ul {
   color: white;
   font-weight: bold;
   font-size: 18px;
+}
+
+/*menu dropdown*/
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  float: left;
+  left: 85.3%;
+  background-color: white;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  font-size: 12px;
+  z-index: 1;
+  height: fit-content;
+  width: 170px;
+  margin-top: 40px;
+  border-radius: 10px;
+}
+
+.dropdown-content a {
+  margin-left: 15px;
+  text-align: left;
+  color: rgba(73, 79, 81, 1);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.textdpn {
+  border-style: solid;
+  border-width: thin;
+  border-color: rgba(153, 153, 153, 1);
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  display: block;
+  text-align: left;
+  color: rgba(73, 79, 81, 1);
+  padding: 12px 40px;
+  height: 50px;
+  padding-top: 20px;
+}
+
+.picdpn {
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 8px;
+  float: left;
+  width: 45px;
+  height: 40px;
+}
+
+.theme {
+  border-style: solid;
+  border-width: thin;
+  border-color: rgba(153, 153, 153, 1);
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+  display: block;
+  text-align: left;
+  color: rgba(73, 79, 81, 1);
+  padding-top: 10px;
+  height: 40px;
+  padding-bottom: 15px;
+}
+
+.theme i {
+  color: red;
+  width: 20px;
+  height: 20px;
 }
