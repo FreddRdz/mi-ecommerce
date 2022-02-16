@@ -13,6 +13,10 @@
   margin: 0 40px;
 }
 
+.foto-detalle-flow:hover {
+  border: red 2px solid;
+}
+
 .container-volver {
   text-decoration: none;
   color: black;

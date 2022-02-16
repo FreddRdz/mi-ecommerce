@@ -1,0 +1,22 @@
+.imagenOver {
+  width: auto;
+  height: auto;
+  z-index: 1000;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 1);
+  border-radius: 8px;
+  filter: drop-shadow(0 -10mm 5mm rgb(69, 68, 70));
+  filter: drop-shadow(30px 10px 4px rgb(69, 68, 70));
+  filter: drop-shadow(0 0 2.8rem rgb(69, 68, 70));
+}
+.imagenPrincipal {
+  visibility: hidden;
+}
+.foto-detalle-null {
+  height: 50px;
+  border-radius: 5px;
+  width: 50px;
+}

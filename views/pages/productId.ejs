@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="/css/styles.css" />
     <link rel="stylesheet" href="/css/product.css" />
     <link rel="stylesheet" href="/css/header.css" />
+    <link rel="stylesheet" href="/css/provisional.css" />
+    <link rel="stylesheet" href="/css/index.css" />
+    <link rel="stylesheet" href="/css/galeriaImagenes.css" />
     <script
       src="https://kit.fontawesome.com/4070a3aa63.js"
       crossorigin="anonymous"
@@ -25,28 +28,51 @@
         </section>
         <section class="container-producto-detalle">
           <div class="flow-images">
+            <% if (locals.productToShow.image === null) { %>
             <img
-              src="/assets/D_NQ_NP_717087-MLA41598235072_042020-O.webp"
+              src="/assets/fallback.png"
               alt=""
-              class="foto-detalle-flow"
-            />
-            <img
-              src="/assets/images (2).jpeg"
-              alt=""
-              class="foto-detalle-flow"
-            />
-            <img
-              src="/assets/D_NQ_NP_705560-MLA44741701921_012021-O.webp"
-              alt=""
-              class="foto-detalle-flow"
-            />
-          </div>
-          <div class="foto-demostracion">
+              class="foto-detalle-flow img"
+            /><% }else{ %>
             <img
               src="<%= locals.productToShow.image %>"
               alt=""
-              class="foto-detalle-xlsize"
+              class="foto-detalle-flow img"
             />
+            <% }%> <% if (locals.productToShow.image === null) { %>
+            <img
+              src="/assets/fallback.png"
+              alt=""
+              class="foto-detalle-flow img"
+            /><% }else{ %>
+            <img
+              src="<%= locals.productToShow.image %>"
+              alt=""
+              class="foto-detalle-flow img"
+            />
+            <% }%> <% if (locals.productToShow.image === null) { %>
+            <img
+              src="/assets/fallback.png"
+              alt=""
+              class="foto-detalle-flow img"
+            /><% }else{ %>
+            <img
+              src="<%= locals.productToShow.image %>"
+              alt=""
+              class="foto-detalle-flow img"
+            />
+            <% }%>
+          </div>
+          <div class="foto-demostracion">
+            <% if (locals.productToShow.image === null) { %>
+            <img src="/assets/fallback.png" class="foto-detalle-flow img" />
+            <% }else{ %>
+            <img
+              src="<%= locals.productToShow.image %>"
+              alt=""
+              class="foto-detalle-xlsize imagen-principal"
+            />
+            <% }%>
           </div>
           <div class="product-info">
             <p class="title-product"><%= locals.productToShow.title %></p>
@@ -149,4 +175,5 @@
       </div>
     </footer>
   </body>
+  <script src="/js/galeriaImagenes.js"></script>
 </html>
