@@ -70,14 +70,6 @@ window.addEventListener("load", function () {
     }
   });
 
- // botonFormulario.addEventListener("click",function(event){
-   // botonFormulario.disabled = true
-    
-   // if (email.value.length > 4 && passValidar.value == pass.value) {
-   //   console.log(email.value.length)
-   //   botonFormulario.disabled = false;
-   // }
-  //})
 
 
 });

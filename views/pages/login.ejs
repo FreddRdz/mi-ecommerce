@@ -31,6 +31,7 @@
                 class="username-input"
                 placeholder="Tu nombre de usuario"
                 name="email"
+                
               />
               <% if (locals.errors && errors.email ) {%>
               <p class="texto-alerta"><%= errors.email.msg %></p>
@@ -45,6 +46,7 @@
               <p class="texto-alerta"><%= errors.password.msg %></p>
               <% } %>
               <button type="submit" class="button-login">Iniciar Sesión</button>
+              <label><input type="checkbox" name="recuerdame" class="recuerdame" value="">  Recuerdame</label>
             </form>
           </div>
           <div class="text-no-cuenta">
