@@ -6,8 +6,8 @@ const session = require("express-session");
 
 // Configuración de public, src para todo el proyecto
 app.use(express.static("public"));
-// app.use(express.static("assets"));
-// app.use(express.static("src"));
+app.use(express.static("assets"));
+app.use(express.static("src"));
 app.use(express.urlencoded({ extended: false }));
 //app.use(require("cors")());
 

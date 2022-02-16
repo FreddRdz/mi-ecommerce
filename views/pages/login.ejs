@@ -9,14 +9,14 @@
     <link rel="stylesheet" href="/css/footer-abajo.css" />
     <title>Login</title>
   </head>
-  <body>
+  <body class="login">
     <header class="header-container">
       <img src="/assets/MiEcommerce.png" alt="" class="logo" />
     </header>
     <main class="main-container">
       <div class="background-login-aqua">
         <div class="component-login">
-          <div class="form">
+          <div class="darkForm">
             <p class="text-hola">¡Hola!</p>
             <form method="POST" action="/users/login" class="form-inputs">
               <input
@@ -37,16 +37,21 @@
               <% if (locals.errors && errors.password ) {%>
               <p class="texto-alerta"><%= errors.password.msg %></p>
               <% } %>
-              <button type="submit" class="button-login">Iniciar Sesión</button>
+              <button type="submit" class="button-login-Dark">
+                Iniciar Sesión
+              </button>
             </form>
           </div>
           <div class="text-no-cuenta">
             <p class="tienes-cuenta">¿No tienes cuenta?</p>
-            <a href="/users/register" class="text-registrate">Registrate</a>
+            <a href="/users/register" class="text-registrate-Dark"
+              >Registrate</a
+            >
           </div>
         </div>
       </div>
     </main>
     <%- include('../partials/footer.ejs') %>
+    <script src="/js/dark.js"></script>
   </body>
 </html>

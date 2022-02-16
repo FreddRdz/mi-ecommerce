@@ -1,4 +1,23 @@
 /* Product card styles */
+
+/* ------------------------------------------------------ */
+.darkHome {
+  background-color: black;
+  color: white;
+}
+
+.loginDivDark {
+  background-color: gray;
+}
+
+.contenedor-producto-Dark {
+  background-color: rgba(73, 79, 81, 1);
+}
+
+.etiqueta {
+  color: #fff;
+}
+/* ------------------------------------------------------ */
 main {
   margin-top: 70px;
 }
@@ -26,6 +45,7 @@ main {
   display: flex;
   flex-direction: column;
   width: 220px;
+  background-color: rgba(73, 79, 81, 1);
 }
 .contenedor-producto > img,
 .contenedor-producto > a > img {
