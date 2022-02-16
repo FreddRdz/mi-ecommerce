@@ -36,7 +36,7 @@ app.use("/", cartRoute);
 
 // CHECKOUT
 app.get("*", function (req, res) {
-  res.status(404).render("checkout");
+  res.status(404).render("pagenotfound");
 });
 
 //Servidor
