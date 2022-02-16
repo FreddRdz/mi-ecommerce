@@ -89,3 +89,51 @@
   color: red;
   margin-top: -14px;
 }
+
+.errores {
+  /* propiedades y tamaños del div */
+  width: 25%;
+  height: 15%;
+  background-color: azure;
+  box-shadow: 0px 0px 10px rgb(100, 100, 100);
+  
+  position: absolute;
+  border-radius: 10px;
+  /* alineacion del div en el centro */
+  margin-left: 37.5%;
+  margin-bottom: 100px;
+  /* alineacion el titulo del texto */
+  padding-top: 5px;
+  padding-left: 5px;
+  z-index: 100;
+  display: none;
+  word-break: break-all;
+
+  animation: drop 0.5s ease forwards;
+}
+
+@keyframes drop{
+  70%{ transform: translateY(30px)}
+  100%{ transform: translateY(15px); opacity: 1;}
+}
+
+.errores ul {
+ list-style: none;
+}
+
+.botonMensaje {
+  background-color: rgba(12, 176, 147, 1);
+  width: 32%;
+  height: 30%;
+  border-radius: 20px;
+  margin-left: 65%;
+  margin-top: 8px;
+  border: 0px;
+  color: white;
+  z-index: 10000;
+  word-wrap: break-word;
+  position: relative;
+  
+  
+ 
+}

@@ -13,6 +13,7 @@
       <img src="/assets/MiEcommerce.png" alt="" class="logo" />
     </header>
     <main class="main-container">
+      
       <div class="background-login-aqua">
         <div class="component-login">
           <div class="form">
@@ -23,7 +24,9 @@
                 class="username-input"
                 placeholder="Tu email"
                 name="email"
+                
               />
+              
               <% if (locals.errors && errors.email) { %>
               <div class="text-danger" style="color: red">
                 <%= errors.email.msg %>
@@ -48,6 +51,7 @@
                 class="user-password"
                 placeholder="Repite tu contraseña"
                 name="Repitepassword"
+                id="passwordRepeat"
               />
 
               <% if (locals.errors && errors.Repitepassword) { %>
@@ -64,7 +68,11 @@
           </div>
         </div>
       </div>
+
+
     </main>
     <%- include('../partials/footer.ejs') %>
+    
+    
   </body>
 </html>
