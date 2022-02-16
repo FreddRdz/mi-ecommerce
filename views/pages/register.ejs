@@ -14,7 +14,6 @@
       <img src="/assets/MiEcommerce.png" alt="" class="logo" />
     </header>
     <main class="main-container">
-      
       <div class="background-login-aqua">
         <div class="component-login">
           <div class="form">
@@ -25,35 +24,41 @@
                 class="username-input"
                 placeholder="Tu email"
                 name="email"
-                
               />
-              
+
               <% if (locals.errors && errors.email) { %>
               <div class="text-danger" style="color: red">
                 <%= errors.email.msg %>
               </div>
               <% } %>
 
-              <input
-                type="password"
-                class="user-password"
-                name="password"
-                placeholder="Tu nueva contraseña"
-                required
-              />
+              <!-- input password -->
+              <div class="items">
+                <input
+                  type="password"
+                  class="user-password"
+                  name="password"
+                  placeholder="Tu nueva contraseña"
+                  id="pass"
+                />
+                <p id="frase"></p>
+              </div>
               <% if (locals.errors && errors.password) { %>
               <div class="text-dangerContraseña" style="color: red">
                 <%= errors.password.msg %>
               </div>
               <% } %>
 
-              <input
-                type="password"
-                class="user-password"
-                placeholder="Repite tu contraseña"
-                name="Repitepassword"
-                id="passwordRepeat"
-              />
+              <div class="items">
+                <input
+                  type="password"
+                  class="user-password"
+                  placeholder="Repite tu contraseña"
+                  name="Repitepassword"
+                  id="passValidar"
+                />
+                <p id="fraseValidar"></p>
+              </div>
 
               <% if (locals.errors && errors.Repitepassword) { %>
               <div class="text-dangerRContraseña" style="color: red">
@@ -69,11 +74,9 @@
           </div>
         </div>
       </div>
-
-
     </main>
     <%- include('../partials/footer.ejs') %>
-    
-    
+
+    <script src="/js/register.js"></script>
   </body>
 </html>

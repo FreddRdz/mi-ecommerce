@@ -62,6 +62,7 @@
   border-radius: 8px;
   border: 1px solid black;
   width: 100%;
+  outline: 0;
 }
 
 .button-register {
@@ -109,3 +110,20 @@
   right: 90px;
 }
 
+/* Estilos de validacion de eventos */
+
+#frase {
+  font-size: 13px;
+  position: absolute;
+  top: 44%;
+  right: 15%;
+  display: none;
+}
+
+#fraseValidar {
+  font-size: 13px;
+  position: absolute;
+  top: 60%;
+  right: 15%;
+  display: none;
+}
