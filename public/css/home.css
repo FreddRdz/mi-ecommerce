@@ -380,3 +380,68 @@ ul {
   font-weight: bold;
   font-size: 18px;
 }
+
+.nuevoMenu{
+  width: 200px;
+  height: 190px;
+  background-color: whitesmoke;
+  display: none;
+  
+  top: 60px;
+  left: 80%;
+  position: absolute;
+  border-radius: 20px;
+  
+}
+
+.profilePic2{
+  width: 30px;
+  height: 32px;
+  padding: 4px 4px 4px 4px;
+  left: 5px;
+  display: flex;
+  position: relative;
+  top: 10px;
+
+}
+
+.alignname2{
+  height: 32px;
+  width: 30px;
+  
+  display: flex;
+  position: relative;
+  left: 20%;
+  bottom: 15px;
+  
+}
+
+.listaMenu{
+  height: 10px;
+  bottom: 35px;
+  display: flex;
+  position: relative;
+  
+  justify-content: center;
+  
+}
+
+.elementosLista{
+  font-size: 12px;
+  color: black;
+  text-decoration: none;
+}
+
+.linea1{
+  
+  width: 100%;
+  display: flex;
+  position: relative;
+  bottom: 18px;
+}
+.linea2{
+  width: 100%;
+  display: flex;
+  position: relative;
+  top: 75px;
+}
