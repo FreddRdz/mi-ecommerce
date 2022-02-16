@@ -1,49 +1,12 @@
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
-/* Colores */
-:root {
-  --color-blanco: rgba(255, 255, 255, 1);
-  --color-gris: rgba(153, 153, 153, 1);
-  --color-background: rgba(235, 235, 235, 1);
-  --color-gris-oscuro: rgba(73, 79, 81, 1);
-  --color-aqua: rgba(12, 176, 147, 1);
-  --color-negro: rgba(0, 0, 0, 1);
-  --color-rojo: rgba(255, 0, 0, 1);
-}
-
-h1 {
-  font-size: 40px;
-}
-
-h2 {
-  font-size: 32px;
-}
-
-h3 {
-  font-size: 24px;
-}
-
-html {
-  font-family: Arial, Helvetica, sans-serif;
-  font-style: normal;
-  font-weight: normal;
-}
-body {
-  background-color: var(--color-background);
-}
-
 footer {
   display: flex;
   width: 100%;
   border-top: grey 1px solid;
   height: 64px;
   bottom: 0;
-  position: absolute;
+  z-index: 100;
   justify-content: space-between;
+  margin-top: 20px;
 }
 
 .social-media {
@@ -74,4 +37,38 @@ footer {
 
 .grupo1 {
   height: 30px;
+}
+
+@media (max-width: 600px) {
+  footer {
+    display: flex;
+    width: 100%;
+    border-top: grey 1px solid;
+    height: 64px;
+    bottom: 0;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    gap: 8px;
+  }
+
+  .social-media {
+    order: 2;
+    margin: 0;
+  }
+
+  .derechos {
+    order: 1;
+    margin: 0;
+    text-align: center;
+  }
+
+  .tiendas {
+    order: 3;
+    margin: 0;
+  }
+
+  .grupo1 {
+    height: 30px;
+  }
 }

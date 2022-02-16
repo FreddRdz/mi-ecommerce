@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/4070a3aa63.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/provisional.css" />
+    <link rel="stylesheet" href="/css/header.css" />
+    <!-- <link rel="stylesheet" href="/css/home.css" /> -->
+    <link rel="stylesheet" href="/css/footer-abajo.css" />
+    <link rel="stylesheet" href="/css/index.css" />
+    <title>Home</title>
+  </head>
+  <body>
+    <%- include("../partials/header")%>
+    <main>
+      <%- include("../partials/menu")%>
+      <!-- Anuncios -->
+      <div class="anuncios">
+        <div class="anuncios-container">
+          <div class="anuncios-container-televisoras">
+            <div class="televisoras-container disney">
+              <div class="container-info">
+                <div class="logo">
+                  <img src="/assets/disneybrand.png" class="brand" alt="" />
+                </div>
+                <div class="info-container">
+                  <p class="text-info-bold">50% OFF en Combo Plus</p>
+                  <p class="text-info">Canjeando 50.000 puntos</p>
+                  <p class="text-info">MiEcommerce</p>
+                </div>
+              </div>
+            </div>
+            <div class="televisoras-container hbo">
+              <div class="container-info">
+                <div class="logo">
+                  <img src="/assets/hbobrand.png" class="brand" alt="" />
+                </div>
+                <div class="info-container">
+                  <p class="text-info-bold">50% OFF en HBO Max</p>
+                  <p class="text-info">Canjeando 50.000 puntos</p>
+                  <p class="text-info">MiEcommerce</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <%- include("../partials/productCard")%><%- include("../partials/menu")%>
+    </main>
+    <%- include("../partials/footer")%>
+  </body>
+</html>
