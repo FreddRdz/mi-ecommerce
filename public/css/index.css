@@ -345,6 +345,11 @@ main {
   height: 40px;
 }
 
+.btnTheme {
+  background: none;
+  border: 0;
+}
+
 .theme svg {
   padding-left: 8px;
   margin-top: 1px;
