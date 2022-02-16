@@ -30,24 +30,33 @@
               </div>
               <% } %>
 
-              <input
-                type="password"
-                class="user-password"
-                name="password"
-                placeholder="Tu nueva contraseña"
-              />
+              <!-- input password -->
+              <div class="items">
+                <input
+                  type="password"
+                  class="user-password"
+                  name="password"
+                  placeholder="Tu nueva contraseña"
+                  id="pass"
+                />
+                <p id="frase"></p>
+              </div>
               <% if (locals.errors && errors.password) { %>
               <div class="text-dangerContraseña" style="color: red">
                 <%= errors.password.msg %>
               </div>
               <% } %>
 
-              <input
-                type="password"
-                class="user-password"
-                placeholder="Repite tu contraseña"
-                name="Repitepassword"
-              />
+              <div class="items">
+                <input
+                  type="password"
+                  class="user-password"
+                  placeholder="Repite tu contraseña"
+                  name="Repitepassword"
+                  id="passValidar"
+                />
+                <p id="fraseValidar"></p>
+              </div>
 
               <% if (locals.errors && errors.Repitepassword) { %>
               <div class="text-dangerRContraseña" style="color: red">
@@ -65,5 +74,6 @@
       </div>
     </main>
     <%- include('../partials/footer.ejs') %>
+    <script src="/js/register.js"></script>
   </body>
 </html>
