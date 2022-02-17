@@ -6,37 +6,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/css/styles.css" />
     <link rel="stylesheet" href="/css/header.css" />
+    <link rel="stylesheet" href="/css/index.css" />
     <link rel="stylesheet" href="/css/footer-abajo.css" />
     <link rel="stylesheet" href="/css/checkout.css" />
     <script
       src="https://kit.fontawesome.com/4070a3aa63.js"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="/css/home.css" />
-    <title>Página no encontrada</title>
+    <!-- <link rel="stylesheet" href="/css/home.css" /> -->
+    <title>Página no implementada</title>
   </head>
   <body>
     <%- include("../partials/header")%>
     <main>
       <!-- Mensaje error -->
-      <div>
-        <p class="bigWord">Vaya</p>
-        <br />
-        <p class="sorrymsg">No hemos podido encontrar la pagina que buscas.</p>
-        <br />
-        <p class="code">Código de error: 501 not implemented</p>
-        <br />
-        <p class="msg">
+      <div class="container-text">
+        <p class="main-titulo">Vaya</p>
+        <p class="subtitulo">
+          Página no terminada por el departamento de diseño.
+        </p>
+        <p class="titulo3">Código de error: 501 not implemented</p>
+        <p class="titulo4">
           Aqui tienes algunos enlaces que pueden servirte de ayuda:
         </p>
-        <ol>
-          <li><a href="/">Inicio</a></li>
-          <li><a href="/products">Último artículo visitado</a></li>
-          <li><a href="/cart">Carrito</a></li>
-        </ol>
+        <div class="links-container">
+          <a class="link-button" href="/">Inicio</a>
+          <a class="link-button" href="/products">Último artículo visitado</a>
+          <a class="link-button" href="/cart">Carrito</a>
+        </div>
       </div>
       <div class="container">
-        <img id="error" src="/assets/error501.jpg" alt="Error 404" />
+        <img
+          class="img-notImplemented"
+          src="/assets/501error.png"
+          alt="Error 404"
+        />
       </div>
     </main>
     <%- include("../partials/footer")%>

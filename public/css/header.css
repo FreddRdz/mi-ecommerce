@@ -1,3 +1,7 @@
+.darkheader {
+  background-color: black;
+}
+
 header {
   display: flex;
   width: 100%;

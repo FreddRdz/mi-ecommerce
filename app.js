@@ -6,8 +6,8 @@ const session = require("express-session");
 
 // Configuración de public, src para todo el proyecto
 app.use(express.static("public"));
-// app.use(express.static("assets"));
-// app.use(express.static("src"));
+app.use(express.static("assets"));
+app.use(express.static("src"));
 app.use(express.urlencoded({ extended: false }));
 app.use(require("cors")());
 
@@ -34,10 +34,11 @@ app.use("/", productRoute);
 app.use("/", storeRoute);
 app.use("/", cartRoute);
 
-// CHECKOUT
-app.get("*", function (req, res) {
-  res.status(404).render("checkout");
-});
+//Checkout
+app.get("/checkout", (req, res) => res.render("checkout"));
+
+// Page not found
+app.get("*", (req, res) => res.status(404).render("pagenotfound"));
 
 //Servidor
 app.listen(PORT, () => {
