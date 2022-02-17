@@ -1,23 +1,25 @@
 /* Product card styles */
 
 /* ------------------------------------------------------ */
-.darkHome {
+
+.darkColor {
   background-color: black;
   color: white;
-}
-
-.loginDivDark {
-  background-color: gray;
 }
 
 .contenedor-producto-Dark {
   background-color: rgba(73, 79, 81, 1);
 }
 
+.etiqueta-Dark {
+  color: white;
+}
+
 .etiqueta {
-  color: #fff;
+  color: black;
 }
 /* ------------------------------------------------------ */
+
 main {
   margin-top: 70px;
 }
@@ -36,17 +38,18 @@ main {
   justify-content: space-between;
   row-gap: 20px;
 }
-
+/* ------------------------------------------- */
 .contenedor-producto {
-  background-color: #fff;
   margin: 15px 0 15px 0;
   padding: 10px;
   border-radius: 20px;
   display: flex;
   flex-direction: column;
   width: 220px;
-  background-color: rgba(73, 79, 81, 1);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
+
+/* ---------------------------------------- */
 .contenedor-producto > img,
 .contenedor-producto > a > img {
   width: 200px;
@@ -376,6 +379,55 @@ main {
   padding-top: 13px;
   width: 25px;
   height: 25px;
+}
+
+/*Modo oscuro para dropdown*/
+.darkdropdown {
+  background-color: #000;
+  color: white;
+  border-color: white;
+}
+
+/*Modo oscuro para producto detalle*/
+.darkproduct {
+  background-color: rgba(73, 79, 81, 1);
+  color: white;
+}
+
+.darkbtnaddcart {
+  border-color: white;
+  border-style: solid;
+  border-width: thin;
+}
+
+/*Modo oscuro para lista de productos*/
+.darklistproduct {
+  background-color: rgba(73, 79, 81, 1);
+  color: white;
+}
+
+/*Modo oscuro para carrito*/
+.darkcart {
+  background-color: black;
+  color: white;
+}
+
+.darkcontainerproduct {
+  background-color: rgba(73, 79, 81, 1);
+  color: white;
+}
+
+.darkbtnquitar {
+  background-color: black;
+}
+
+.darkquantity {
+  background-color: black;
+  color: white;
+}
+
+.darkaplicar {
+  background-color: rgba(73, 79, 81, 1);
 }
 
 @media (max-width: 1035px) {
