@@ -9,7 +9,7 @@ app.use(express.static("public"));
 app.use(express.static("assets"));
 app.use(express.static("src"));
 app.use(express.urlencoded({ extended: false }));
-app.use(require("cors")());
+//app.use(require("cors")());
 
 //Rutas
 app.set("view engine", "ejs");

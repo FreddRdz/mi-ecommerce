@@ -17,7 +17,7 @@
       <div class="errores">
         <p><strong>¡Error en el formulario!</strong></p>
         <ul>
-          <li> </li>
+          <li></li>
         </ul>
 
         <button class="botonMensaje">Entendido</button>
@@ -32,7 +32,6 @@
                 class="username-input"
                 placeholder="Tu nombre de usuario"
                 name="email"
-                
               />
               <% if (locals.errors && errors.email ) {%>
               <p class="texto-alerta"><%= errors.email.msg %></p>
@@ -47,7 +46,15 @@
               <p class="texto-alerta"><%= errors.password.msg %></p>
               <% } %>
               <button type="submit" class="button-login">Iniciar Sesión</button>
-              <label><input type="checkbox" name="recuerdame" class="recuerdame" value="">  Recuerdame</label>
+              <label
+                ><input
+                  type="checkbox"
+                  name="recuerdame"
+                  class="recuerdame"
+                  value=""
+                />
+                Recuerdame</label
+              >
             </form>
           </div>
           <div class="text-no-cuenta">
@@ -61,4 +68,5 @@
     <%- include('../partials/footer.ejs') %>
     <script defer src="/js/login.js"></script>
   </body>
+  <script defer src="/js/login.js"></script>
 </html>

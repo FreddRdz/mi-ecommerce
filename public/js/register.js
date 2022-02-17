@@ -3,25 +3,28 @@ window.addEventListener("load", function () {
   let passValidar = document.querySelector("#passValidar");
   let frase = document.querySelector("#frase");
   let fraseValidar = document.querySelector("#fraseValidar");
-  let botonFormulario = document.querySelector(".button-register")
-  let email = document.querySelector(".username-input")
+  let botonFormulario = document.querySelector(".button-register");
+  let email = document.querySelector(".username-input");
 
-  email.addEventListener("keyup", function(){
-    botonFormulario.disabled = true
+  email.addEventListener("keyup", function () {
+    botonFormulario.disabled = true;
     if (email.value.length > 5) {
-      
-      botonFormulario.disabled = false
-      let estilos = document.querySelector(".button-register").style.cursor ="pointer"
-      let estilos2 = document.querySelector(".button-register").style.opacity = ""
-      
+      botonFormulario.disabled = false;
+      let estilos = (document.querySelector(".button-register").style.cursor =
+        "pointer");
+      let estilos2 = (document.querySelector(".button-register").style.opacity =
+        "");
     }
-  })
+  });
 
   pass.addEventListener("keyup", function () {
-    botonFormulario.disabled = true
+    botonFormulario.disabled = true;
 
-    let estilos = document.querySelector(".button-register").style.cursor ="not-allowed"
-    let estilos2 = document.querySelector(".button-register").style.opacity = 0.25
+    let estilos = (document.querySelector(".button-register").style.cursor =
+      "not-allowed");
+    let estilos2 = (document.querySelector(
+      ".button-register"
+    ).style.opacity = 0.25);
     if (pass.value.length == 0) {
       pass.style = "none";
       frase.style.display = "none";
@@ -45,15 +48,14 @@ window.addEventListener("load", function () {
   });
 
   passValidar.addEventListener("keyup", function () {
-    if (passValidar.value == pass.value ) {
+    if (passValidar.value == pass.value) {
       // console.log("contraseña igual");
       fraseValidar.innerHTML = "Contraseña coincide";
       fraseValidar.style.display = "block";
       fraseValidar.style.color = "green";
-      
+
       passValidar.style.border = "2px solid green";
     }
-
 
     if (passValidar.value !== pass.value) {
       // console.log("contraseña diferente");
@@ -69,7 +71,4 @@ window.addEventListener("load", function () {
       fraseValidar.style.display = "none";
     }
   });
-
-
-
 });

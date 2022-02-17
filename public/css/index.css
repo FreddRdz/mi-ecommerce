@@ -172,6 +172,98 @@ main {
   font-size: 18px;
 }
 
+/*menu dropdown*/
+.dropdownbtn {
+  border: none;
+  position: static;
+  border-style: none;
+  cursor: pointer;
+  width: auto;
+  height: 32px;
+  background: rgba(73, 79, 81, 1);
+  border-radius: 16px;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 1);
+}
+
+.dropdownbtn:hover {
+  background: rgba(12, 176, 147, 1);
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  float: left;
+  left: 85.3%;
+  background-color: white;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  font-size: 12px;
+  z-index: 1;
+  height: fit-content;
+  width: 170px;
+  margin-top: 40px;
+  border-radius: 10px;
+}
+
+.dropdown-content a {
+  margin-left: 15px;
+  text-align: left;
+  color: rgba(73, 79, 81, 1);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.textdpn {
+  border-style: solid;
+  border-width: thin;
+  border-color: rgba(153, 153, 153, 1);
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  display: block;
+  text-align: left;
+  color: rgba(73, 79, 81, 1);
+  padding: 12px 40px;
+  height: 50px;
+  padding-top: 20px;
+}
+
+.picdpn {
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 8px;
+  float: left;
+  width: 45px;
+  height: 40px;
+}
+
+.theme {
+  border-style: solid;
+  border-width: thin;
+  border-color: rgba(153, 153, 153, 1);
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+  display: block;
+  text-align: left;
+  color: rgba(73, 79, 81, 1);
+  height: 40px;
+}
+
+.theme svg {
+  padding-left: 8px;
+  margin-top: 1px;
+  padding-top: 13px;
+  width: 25px;
+  height: 25px;
+}
+
 @media (max-width: 600px) {
   .contenedor-productos {
     row-gap: 0;
@@ -281,6 +373,13 @@ main {
   }
   .anuncios-container-televisoras {
     top: 10px;
+  }
+
+  .dropdown-content {
+    height: 1000px;
+    width: 100%;
+    left: 50%;
+    margin-top: -1px;
   }
 }
 

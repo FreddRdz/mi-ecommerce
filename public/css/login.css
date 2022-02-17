@@ -131,7 +131,6 @@
   height: 15%;
   background-color: azure;
   box-shadow: 0px 0px 10px rgb(100, 100, 100);
-  
   position: absolute;
   border-radius: 10px;
   /* alineacion del div en el centro */
@@ -147,13 +146,18 @@
   animation: drop 0.5s ease forwards;
 }
 
-@keyframes drop{
-  70%{ transform: translateY(30px)}
-  100%{ transform: translateY(15px); opacity: 1;}
+@keyframes drop {
+  70% {
+    transform: translateY(30px);
+  }
+  100% {
+    transform: translateY(15px);
+    opacity: 1;
+  }
 }
 
 .errores ul {
- list-style: none;
+  list-style: none;
 }
 
 .botonMensaje {
@@ -168,7 +172,10 @@
   z-index: 10000;
   word-wrap: break-word;
   position: relative;
-  
-  
- 
+}
+
+@media (max-width: 600px) {
+  .errores {
+    height: 20%;
+  }
 }
