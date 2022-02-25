@@ -23,4 +23,4 @@ router.get("/products", apiController.getAllProducts);
 
 // router.post("/register", validaciones, mainController.registroProceso);
 
-// module.exports = router;
+module.exports = router;
