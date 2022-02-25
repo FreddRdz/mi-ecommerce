@@ -22,6 +22,12 @@ header {
   width: 200px;
   height: auto;
   background-repeat: no-repeat;
+  
+}
+
+.link {
+  background-image: url("/assets/MiEcommerce.svg");
+  background-repeat: no-repeat;
 }
 
 .search {

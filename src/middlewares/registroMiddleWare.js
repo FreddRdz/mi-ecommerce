@@ -9,10 +9,10 @@ let validarRegistro = [
     .withMessage("Tienes que escribir una contraseña")
     .isNumeric()
     .withMessage("Deben ser solo valores numericos")
-    .isLength({ min: 8 })
-    .withMessage("Debes escribir un minimo de 8 caracteres")
     .trim()
-    .withMessage("no dejes espacios en blanco"),
+    .withMessage("no dejes espacios en blanco")
+    .isLength({ min: 8 })
+    .withMessage("Debes escribir un minimo de 8 caracteres"),
 
   check("email")
     .notEmpty()
@@ -26,11 +26,10 @@ let validarRegistro = [
     .withMessage("Tienes que escribir una contraseña")
     .isNumeric()
     .withMessage("Deben ser solo valores numericos")
-    .isLength({ min: 8 })
-    .withMessage("Debes escribir un minimo de 8 caracteres")
-
     .trim()
-    .withMessage("no dejes espacios en blanco"),
+    .withMessage("no dejes espacios en blanco")
+    .isLength({ min: 8 })
+    .withMessage("Debes escribir un minimo de 8 caracteres"),
 ];
 
 module.exports = validarRegistro;
