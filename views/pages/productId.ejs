@@ -29,40 +29,15 @@
         </section>
         <section class="container-producto-detalle">
           <div class="flow-images">
-            <% if (locals.productToShow.image === null) { %>
-            <img
-              src="/assets/fallback.png"
-              alt=""
-              class="foto-detalle-flow img"
-            /><% }else{ %>
-            <img
-              src="<%= locals.productToShow.image %>"
-              alt=""
-              class="foto-detalle-flow img"
-            />
-            <% }%> <% if (locals.productToShow.image === null) { %>
-            <img
-              src="/assets/fallback.png"
-              alt=""
-              class="foto-detalle-flow img"
-            /><% }else{ %>
-            <img
-              src="<%= locals.productToShow.image %>"
-              alt=""
-              class="foto-detalle-flow img"
-            />
-            <% }%> <% if (locals.productToShow.image === null) { %>
-            <img
-              src="/assets/fallback.png"
-              alt=""
-              class="foto-detalle-flow img"
-            /><% }else{ %>
-            <img
-              src="<%= locals.productToShow.image %>"
-              alt=""
-              class="foto-detalle-flow img"
-            />
-            <% }%>
+            <img src="<%=locals.productToShow.gallery[0] ?
+            locals.productToShow.gallery[0] : "/assets/fallback.png" %>"
+            class="foto-detalle-flow img" /> <img
+            src="<%=locals.productToShow.gallery[1] ?
+            locals.productToShow.gallery[1] :"/assets/fallback.png"%>"
+            class="foto-detalle-flow img" /> <img
+            src="<%=locals.productToShow.gallery[2] ?
+            locals.productToShow.gallery[2] :"/assets/fallback.png" %>"
+            class="foto-detalle-flow img" />
           </div>
           <div class="foto-demostracion">
             <% if (locals.productToShow.image === null) { %>

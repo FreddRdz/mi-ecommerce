@@ -16,9 +16,9 @@ module.exports = {
 
   findProductById: async (req, res) => {
     let idProduct = req.params.id;
-    console.log(idProduct)
+    console.log(idProduct);
     const productToShow = await ProductModel.filterProductById(idProduct);
-    console.log(productToShow)
+    console.log(productToShow);
     res.render("productId", { productToShow });
   },
 
@@ -39,42 +39,48 @@ module.exports = {
       trueSuggested[3],
       trueSuggested[4],
     ];
-    
+
     return res.render("product", {
       trueSuggested,
     });
   },
 
-  //******** TODOS LOS PRODUCTOS  ***************// // url =>   /products/products
   //          /api/products/:id/related         //
   findProductsRelatedById: async (req, res) => {
+    try {
+      let id = req.params.id;
+      const productToShow = await ProductModel.filterProductById(id);
 
- try {   let id = req.params.id;
-    const productToShow = await ProductModel.filterProductById(id);
-    let productosSugeridos = [];
-    
-    let url =
-      "http://dhfakestore.herokuapp.com/api/products/" + id + "/related";
-    fetch(url)
-      .then((response) => response.json())
-      .then((data) => {
-        let productosRelacionados = [];
-        //console.log(data);
-        for (let index = 0; index <= 4; index++) {
-          if (data.length > index) {
-            productosRelacionados.push(data[index]);
+      let productosSugeridos = [];
+
+      let url =
+        "http://dhfakestore.herokuapp.com/api/products/" + id + "/related";
+      fetch(url)
+        .then((response) => response.json())
+        .then((data) => {
+          let productosRelacionados = [];
+          //console.log(data);
+          for (let index = 0; index <= 4; index++) {
+            if (data.length > index) {
+              productosRelacionados.push(data[index]);
+            }
           }
-        }
-        console.log(productToShow.title);
-    
-        return res.render("productRelated", {
-          productosRelacionados,
-          productosSugeridos,
-          productToShow,
+          console.log(productToShow.title);
+
+          return res.render("productRelated", {
+            productosRelacionados,
+            productosSugeridos,
+            productToShow,
+          });
+        })
+        .catch((error) => {
+          console.log("asd", error);
+          res.render("productRelated");
         });
-      }) .catch(error => {console.log("asd",error); res.render("productRelated")}) ;
-    } 
-      catch(error){console.log("dsa", error) ;res.render("productRelated")}
+    } catch (error) {
+      console.log("dsa", error);
+      res.render("productRelated");
+    }
   },
   getAllProducts: async (req, res) => {
     let url = "https://dhfakestore.herokuapp.com/api/products";
@@ -88,7 +94,7 @@ module.exports = {
   //          /api/products/:id/related         //
   // findProductsRelatedById: (req, res) => {
   //   let id = req.params.id;
-  
+
   //   fetch("https://dhfakestore.herokuapp.com/api/products/" + id)
   //     .then((response) => response.json())
   //     .then((producto) => {

@@ -27,30 +27,16 @@
         </section>
         <section class="container-producto-detalle">
           <div class="flow-images">
-            <img
-              src=<%= locals.productToShow.gallery[2] %>
-              alt=""
-              class="foto-detalle-flow"
-            />
-            <img
-              src=<%= locals.productToShow.gallery[1] %>
-              alt=""
-              class="foto-detalle-flow"
-            />
-            <img
-              src=<%= locals.productToShow.gallery[0] %>
-              alt=""
-              class="foto-detalle-flow"
-            />
+            <img src="<%=locals.productToShow.gallery[0] ?
+            locals.productToShow.gallery[0] : "/assets/fallback.png" %>"
+            class="foto-detalle-flow img" /> <img
+            src="<%=locals.productToShow.gallery[1] ?
+            locals.productToShow.gallery[1] :"/assets/fallback.png"%>"
+            class="foto-detalle-flow img" /> <img
+            src="<%=locals.productToShow.gallery[2] ?
+            locals.productToShow.gallery[2] :"/assets/fallback.png" %>"
+            class="foto-detalle-flow img" />
           </div>
-
-          <!-- <div class="foto-demostracion">
-            <img
-              src="/assets/images (2).jpg"
-              alt=""
-              class="foto-detalle-xlsize"
-            />
-          </div> -->
 
           <div class="foto-demostracion">
             <% if (locals.productToShow.image === null) { %>
@@ -65,15 +51,14 @@
           </div>
 
           <div class="product-info">
-
             <% if (locals.productToShow) { %>
-              <p class="title-product"><%= productToShow.title  %> </p>
-              <% }else{ %>
-                <p>Producto no encontrado</p>
-              <% }%>
+            <p class="title-product"><%= productToShow.title %></p>
+            <% }else{ %>
+            <p>Producto no encontrado</p>
+            <% }%>
 
             <div class="section-puntos">
-              <p class="text-puntos"><%= productToShow.price %> </p>
+              <p class="text-puntos"><%= productToShow.price %></p>
               <p class="subtitle-puntos">PUNTOS</p>
             </div>
             <div class="button-add-to-cart">
@@ -87,8 +72,9 @@
           <p class="text-te-puede-interesar">También te puede interesar</p>
         </section>
         <section class="lista-productos">
-          <!--Productos sugeridos-->
-          <% locals.productosRelacionados && productosRelacionados.forEach(product => { %>
+          <!--Productos relacionados-->
+          <% locals.productosRelacionados &&
+          productosRelacionados.forEach(product => { %>
           <div class="contenedor-producto">
             <img
               src="<%= product.image %>"
@@ -104,8 +90,6 @@
             </div>
           </div>
           <% }) %>
-  
-
         </section>
         <%- include("../partials/menu")%>
       </div>
