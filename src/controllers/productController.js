@@ -15,7 +15,9 @@ module.exports = {
 
   findProductById: async (req, res) => {
     let idProduct = req.params.id;
+    console.log(idProduct)
     const productToShow = await ProductModel.filterProductById(idProduct);
+    console.log(productToShow)
     res.render("productId", { productToShow });
   },
 
@@ -36,6 +38,7 @@ module.exports = {
       trueSuggested[3],
       trueSuggested[4],
     ];
+    
     return res.render("product", {
       trueSuggested,
     });
