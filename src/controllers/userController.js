@@ -62,7 +62,7 @@ module.exports = {
         if (passCorrecta) {
           delete userNameLogin.password;
           delete userNameLogin.Repitepassword;
-          //Inicio de session
+          //Inicio de session y validacion
           req.session.userLogged = userNameLogin;
           res.redirect("/");
         } else {
@@ -71,11 +71,12 @@ module.exports = {
           });
         }
       } else {
+        
         return res.render("login", {
           errors: {
-            email: { msg: "Ingrese el Nombre de usuario correcto" },
-            password: { msg: "Ingrese la contraseña" },
-          },
+            email: { msg: "Ingrese el nombre de usuario correcto" },
+            password: { msg: "Ingrese la contraseña" },       
+          }, 
         });
       }
 

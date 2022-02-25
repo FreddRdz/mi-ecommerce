@@ -5,11 +5,19 @@ window.addEventListener("load", function () {
   let fraseValidar = document.querySelector("#fraseValidar");
   let botonFormulario = document.querySelector(".button-register");
   let email = document.querySelector(".username-input");
+  let form = document.querySelector(".form-inputs");
 
-  email.addEventListener("keyup", function () {
+  form.addEventListener("keyup", function () {
     botonFormulario.disabled = true;
-    if (email.value.length > 5) {
+    let estilos = (document.querySelector(".button-register").style.cursor =
+      "not-allowed");
+    let estilos2 = (document.querySelector(
+      ".button-register"
+    ).style.opacity = 0.25);
+
+    if (email.value.length > 5 && pass.value.length > 7) {
       botonFormulario.disabled = false;
+      
       let estilos = (document.querySelector(".button-register").style.cursor =
         "pointer");
       let estilos2 = (document.querySelector(".button-register").style.opacity =
@@ -18,13 +26,9 @@ window.addEventListener("load", function () {
   });
 
   pass.addEventListener("keyup", function () {
-    botonFormulario.disabled = true;
+    
 
-    let estilos = (document.querySelector(".button-register").style.cursor =
-      "not-allowed");
-    let estilos2 = (document.querySelector(
-      ".button-register"
-    ).style.opacity = 0.25);
+    
     if (pass.value.length == 0) {
       pass.style = "none";
       frase.style.display = "none";

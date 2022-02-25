@@ -9,7 +9,7 @@ window.addEventListener("load", function () {
   });
 
   document.addEventListener("click", function (e) {
-    e.preventDefault();
+    //e.preventDefault();
     document.querySelector(".dropdown-content").style.display = "none";
   });
 
