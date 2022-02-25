@@ -16,9 +16,9 @@ module.exports = {
 
   findProductById: async (req, res) => {
     let idProduct = req.params.id;
-    console.log(idProduct);
+    // console.log(idProduct);
     const productToShow = await ProductModel.filterProductById(idProduct);
-    console.log(productToShow);
+    // console.log(productToShow);
     res.render("productId", { productToShow });
   },
 
@@ -65,7 +65,7 @@ module.exports = {
               productosRelacionados.push(data[index]);
             }
           }
-          console.log(productToShow.title);
+          // console.log(productToShow.title);
 
           return res.render("productRelated", {
             productosRelacionados,
