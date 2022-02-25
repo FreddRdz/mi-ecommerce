@@ -1,11 +1,13 @@
-// const express = require("express");
-// const router = express.Router();
+const express = require("express");
+const router = express.Router();
 
-// //Controladores
-// const cartController = require("../controllers/cartController");
-// const mainController = require("../controllers/mainController");
-// const userController = require("../controllers/userController");
+//Controladores
+//  const cartController = require("../controllers/cartController");
+//  const mainController = require("../controllers/mainController");
+//  const userController = require("../controllers/userController");
+const apiController = require("../controllers/apiController");
 
+router.get("/products", apiController.getAllProducts);
 // //Middlewares
 // const validaciones = require("../middlewares/registroMiddleWare");
 
