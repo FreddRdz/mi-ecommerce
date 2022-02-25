@@ -35,7 +35,7 @@ const apiRoute = require("./src/routes/apiRoute");
 
 // INDEX
 app.use("/api", apiRoute); //cors(corsOptions),*//
-app.use("/product", productRoute);
+app.use("/products", productRoute);
 app.use("/", mainRoute);
 app.use("/users", userRoute);
 app.use("/", storeRoute);
