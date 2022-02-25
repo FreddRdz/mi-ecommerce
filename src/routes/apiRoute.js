@@ -8,6 +8,7 @@ const router = express.Router();
 const apiController = require("../controllers/apiController");
 
 router.get("/products", apiController.getAllProducts);
+
 // //Middlewares
 // const validaciones = require("../middlewares/registroMiddleWare");
 

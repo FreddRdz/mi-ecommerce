@@ -70,23 +70,6 @@
         </section>
         <section class="lista-productos">
           <!--Productos sugeridos-->
-          <% productosSugeridos.forEach(product => { %>
-          <div class="contenedor-producto">
-            <img
-              src="<%= product.image %>"
-              alt="whiskey jack"
-              class="producto-img"
-            />
-            <div class="etiqueta">
-              <p class="nombre"><%= product.title %></p>
-              <div class="contenedor-puntos">
-                <p class="puntos"><%= product.price %></p>
-                <p class="leyenda">PUNTOS</p>
-              </div>
-            </div>
-          </div>
-          <% }) %>
-          <!--Productos relacionados-->
           <% productosRelacionados.forEach(product => { %>
           <div class="contenedor-producto">
             <img
@@ -103,21 +86,8 @@
             </div>
           </div>
           <% }) %>
-          <!--
-          <div class="contenedor-producto">
-            <img
-              src="/assets/images (1).jpeg"
-              alt="whiskey jack"
-              class="producto-img"
-            />
-            <div class="etiqueta">
-              <p class="nombre">NOMBRE DEL PRODUCTO O SERVICIO</p>
-              <div class="contenedor-puntos">
-                <p class="puntos">XX.XXX</p>
-                <p class="leyenda">PUNTOS</p>
-              </div>
-            </div>
-          </div> -->
+  
+
         </section>
         <%- include("../partials/menu")%>
       </div>
