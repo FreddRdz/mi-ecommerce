@@ -48,9 +48,11 @@ module.exports = {
   //******** TODOS LOS PRODUCTOS  ***************// // url =>   /products/products
   //          /api/products/:id/related         //
   findProductsRelatedById: async (req, res) => {
+
+ try {   let id = req.params.id;
+    const productToShow = await ProductModel.filterProductById(id);
     let productosSugeridos = [];
-    let id = req.params.id;
-    console.log(id);
+    
     let url =
       "http://dhfakestore.herokuapp.com/api/products/" + id + "/related";
     fetch(url)
@@ -63,13 +65,16 @@ module.exports = {
             productosRelacionados.push(data[index]);
           }
         }
-        //console.log(productosRelacionados);
-        console.log(productosSugeridos)
+        console.log(productToShow.title);
+    
         return res.render("productRelated", {
           productosRelacionados,
           productosSugeridos,
+          productToShow,
         });
-      });
+      }) .catch(error => {console.log("asd",error); res.render("productRelated")}) ;
+    } 
+      catch(error){console.log("dsa", error) ;res.render("productRelated")}
   },
   getAllProducts: async (req, res) => {
     let url = "https://dhfakestore.herokuapp.com/api/products";

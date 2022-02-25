@@ -28,40 +28,58 @@
         <section class="container-producto-detalle">
           <div class="flow-images">
             <img
-              src="/assets/D_NQ_NP_717087-MLA41598235072_042020-O.webp"
+              src=<%= locals.productToShow.gallery[2] %>
               alt=""
               class="foto-detalle-flow"
             />
             <img
-              src="/assets/images (2).jpeg"
+              src=<%= locals.productToShow.gallery[1] %>
               alt=""
               class="foto-detalle-flow"
             />
             <img
-              src="/assets/D_NQ_NP_705560-MLA44741701921_012021-O.webp"
+              src=<%= locals.productToShow.gallery[0] %>
               alt=""
               class="foto-detalle-flow"
             />
           </div>
 
-          <div class="foto-demostracion">
+          <!-- <div class="foto-demostracion">
             <img
               src="/assets/images (2).jpg"
               alt=""
               class="foto-detalle-xlsize"
             />
+          </div> -->
+
+          <div class="foto-demostracion">
+            <% if (locals.productToShow.image === null) { %>
+            <img src="/assets/fallback.png" class="foto-detalle-flow img" />
+            <% }else{ %>
+            <img
+              src="<%= locals.productToShow.image %>"
+              alt=""
+              class="foto-detalle-xlsize imagen-principal"
+            />
+            <% }%>
           </div>
 
           <div class="product-info">
-            <p class="title-product">whiskey</p>
+
+            <% if (locals.productToShow) { %>
+              <p class="title-product"><%= productToShow.title  %> </p>
+              <% }else{ %>
+                <p>Producto no encontrado</p>
+              <% }%>
+
             <div class="section-puntos">
-              <p class="text-puntos">19.000</p>
+              <p class="text-puntos"><%= productToShow.price %> </p>
               <p class="subtitle-puntos">PUNTOS</p>
             </div>
             <div class="button-add-to-cart">
               <a class="to-cart" href="/cart"> Agregar al Carrito </a>
             </div>
-            <p class="text-product-info">Un buen whiskey</p>
+            <p class="text-product-info"><%= productToShow.description %></p>
           </div>
         </section>
 
@@ -70,7 +88,7 @@
         </section>
         <section class="lista-productos">
           <!--Productos sugeridos-->
-          <% productosRelacionados.forEach(product => { %>
+          <% locals.productosRelacionados && productosRelacionados.forEach(product => { %>
           <div class="contenedor-producto">
             <img
               src="<%= product.image %>"
