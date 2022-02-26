@@ -20,17 +20,18 @@
     <link rel="stylesheet" href="/css/pageNotFound.css" />
     <title>Página no encontrada</title>
   </head>
-  <body class="dark404">
+  <body>
     <%- include("../partials/header")%>
-    <main>
+    <main class="main-container">
       <h1 class="titulo-main">¡Vaya!</h1>
       <h2 class="subitulo">Error 404: página no encontrada</h2>
       <img src="/assets/404-error-not-found.png" class="img-error" alt="" />
       <div class="links-container">
-        <a class="button" href="/">Home</a
-        ><a class="button" href="/api/product/suggested">Products</a>
+        <a class="button" href="/">Home</a>
+        <a class="button" href="/api/product/suggested">Products</a>
       </div>
     </main>
     <%- include('../partials/footer.ejs') %>
+    <script src="/js/dark.js"></script>
   </body>
 </html>
