@@ -5,14 +5,14 @@ const cartController = require("../controllers/cartController");
 const sessionsMiddleWare = require("../middlewares/sessionMiddleWare");
 
 router.get(
-  "/api/cart/:user",
+  "/:user",
   sessionsMiddleWare,
   cartController.findCartByUser
 );
-router.post("/api/cart/:user", cartController.addElementToCartByUser);
-router.post(
-  "/api/cart/delete/:user",
-  cartController.substractElementFromCartByUser
-);
+//router.post("/api/cart/:user", cartController.addElementToCartByUser);
+// router.post(
+//   "/api/cart/delete/:user",
+//   cartController.substractElementFromCartByUser
+// );
 
 module.exports = router;
