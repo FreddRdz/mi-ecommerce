@@ -5,7 +5,11 @@ module.exports = {
     let user = req.params.user;
     user = Number(user);
     carritoByUser = CartModel.filterOwnCartById(user);
-    res.render("cart", { carritoByUser, user });
+    let price = carritoByUser[0].price
+    let cantidad = carritoByUser[0].qty
+    let operacion = (cantidad * price)
+
+    res.render("cart", { carritoByUser, user, operacion });
   },
 
   addElementToCartByUser: (req, res) => {
