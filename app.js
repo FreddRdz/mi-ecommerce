@@ -39,7 +39,7 @@ app.use("/products", productRoute);
 app.use("/", mainRoute);
 app.use("/users", userRoute);
 app.use("/", storeRoute);
-app.use("/", cartRoute);
+app.use("/cart", cartRoute);
 
 //Checkout
 app.get("/checkout", (req, res) => res.render("checkout"));
