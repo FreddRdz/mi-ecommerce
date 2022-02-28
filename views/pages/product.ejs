@@ -29,7 +29,7 @@
           <img src="/assets/chevron-right.svg" alt="" class="container-arrow" />
           <a class="container-volver" href="#">Alimentos</a>
         </section>
-        <section class="container-producto-detalle">
+        <section id="detalle" class="container-producto-detalle">
           <div class="flow-images">
             <img
               src="/assets/D_NQ_NP_717087-MLA41598235072_042020-O.webp"
@@ -57,15 +57,15 @@
           </div>
 
           <div class="product-info">
-            <p class="title-product">Whiskey Jack Daniels Honey 750ml</p>
+            <a class="title-product">Whiskey Jack Daniels Honey 750ml</a>
             <div class="section-puntos">
-              <p class="text-puntos">19.000</p>
-              <p class="subtitle-puntos">PUNTOS</p>
+              <a class="text-puntos">19.000</a>
+              <a class="subtitle-puntos">PUNTOS</a>
             </div>
             <div class="button-add-to-cart">
               <a class="to-cart" href="/cart"> Agregar al Carrito </a>
             </div>
-            <p class="text-product-info">
+            <a class="text-product-info">
               Un verdaderamente fabuloso licor de whiskey Jack Daniels. Está
               hecho con una mezcla de ricas especias y suave, miel tersa y el
               resultado es delicioso sobre hielo o café.
@@ -83,12 +83,12 @@
               <br />
               <br />
               No incluye vasos, la foto es sólo ilustrativa.
-            </p>
+            </a>
           </div>
         </section>
 
         <section class="text-opciones">
-          <p class="text-te-puede-interesar">También te puede interesar</p>
+          <a class="text-te-puede-interesar">También te puede interesar</a>
         </section>
         <div class="lista-productos">
           <!-- PRODUCTOS SUGUERIDOS, SOLAMENTE LOS QUE TIENE VALOR TRUE -->
@@ -100,10 +100,10 @@
               class="producto-img"
             />
             <div class="etiqueta">
-              <p class="nombre"><%= product.title %></p>
+              <a class="nombre"><%= product.title %></a>
               <div class="contenedor-puntos">
-                <p class="puntos"><%= product.price %></p>
-                <p class="leyenda">PUNTOS</p>
+                <a class="puntos"><%= product.price %></a>
+                <a class="leyenda">PUNTOS</a>
               </div>
             </div>
           </div>
@@ -133,5 +133,6 @@
       </div>
     </footer>
     <script src="/js/product.js"></script>
+    <script src="/js/dark.js"></script>
   </body>
 </html>

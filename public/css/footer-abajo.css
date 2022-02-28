@@ -1,14 +1,3 @@
-.social-media-Dark {
-  display: flex;
-  flex-direction: row;
-  opacity: 0.5;
-  margin: 0px auto 0 20px;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
-  color: white;
-}
-
 footer {
   display: flex;
   width: 100%;
@@ -18,6 +7,19 @@ footer {
   z-index: 100;
   justify-content: space-between;
   margin-top: 20px;
+}
+
+.social-media-Dark {
+  background-color: black;
+  color: white;
+}
+
+.grupo1-Dark {
+  color: gray;
+}
+
+.grupo2-Dark {
+  color: gray;
 }
 
 .social-media {
@@ -48,6 +50,7 @@ footer {
 
 .grupo1 {
   height: 30px;
+  color: blue;
 }
 
 @media (max-width: 600px) {
