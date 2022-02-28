@@ -369,6 +369,7 @@ main {
   padding-top: 10px;
   padding-left: 10px;
   padding-right: 8px;
+  margin-left: none;
   float: left;
   width: 45px;
   height: 40px;

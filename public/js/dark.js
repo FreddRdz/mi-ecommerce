@@ -13,6 +13,7 @@ window.addEventListener("load", function () {
   let detalleProducto = document.querySelector("#detalle");
   let bntProducto = document.querySelector(".button-add-to-cart");
   let listaProductos = document.querySelector(".lista-productos");
+  let themeTextbtn = this.document.querySelector("#p1");
 
   btn.addEventListener("click", function (e) {
     //Agregar estilos
@@ -20,7 +21,10 @@ window.addEventListener("load", function () {
       valor = false;
       body.classList.add("darkColor");
       header.classList.add("darkheader");
-      if (contenedor) contenedor.classList.add("contenedor-producto-Dark");
+      themeTextbtn.innerHTML = themeTextbtn.innerHTML.replace(
+        "Oscuro",
+        "Claro"
+      );
       if (contenedorPedidos)
         contenedorPedidos.classList.add("contenedor-producto-Dark");
       menu.classList.add("dark-menu");
@@ -41,6 +45,10 @@ window.addEventListener("load", function () {
       valor = true;
       body.classList.remove("darkColor");
       header.classList.remove("darkheader");
+      themeTextbtn.innerHTML = themeTextbtn.innerHTML.replace(
+        "Claro",
+        "Oscuro"
+      );
       if (contenedor) contenedor.classList.remove("contenedor-producto-Dark");
       if (contenedorPedidos)
         contenedorPedidos.classList.remove("contenedor-producto-Dark");
