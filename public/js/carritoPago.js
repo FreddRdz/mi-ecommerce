@@ -10,7 +10,6 @@ divBloqueo.classList.add("divBloqueo");
 divContenedor.classList.add("divContenedor");
 
 buttonPagar.addEventListener("click", (e) => {
-  e.preventDefault();
   divContenedor.style.backgroundColor = "white";
   h3Titulo.innerText = "¡ERROR!";
 

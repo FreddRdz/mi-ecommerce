@@ -13,6 +13,17 @@ module.exports = {
       });
   },
 
+  getAllProductsApiRest: (req, res) => {
+    let productos = ProductModel.getAllProductos();
+    res.send(productos);
+  },
+
+  findProductByIdApiRest: (req, res) => {
+    let idProduct = req.params.id;
+    const productToShow = ProductModel.findProductByIdApiRest(idProduct);
+    res.send(productToShow);
+  },
+
   findProductById: async (req, res) => {
     let idProduct = req.params.id;
     const productToShow = await ProductModel.filterProductById(idProduct);
@@ -70,10 +81,11 @@ module.exports = {
     fetch(url);
     let response = await fetch(url);
     let data = await response.json();
+    res.send(data);
 
-    return res.render("allProducts", {
-      data,
-    });
+    // return res.render("allProducts", {
+    //   data,
+    // });
   },
   findProductsMostWanted: (req, res) => {},
 };

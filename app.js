@@ -1,15 +1,16 @@
 // Módulos
 const express = require("express");
 const app = express();
-const PORT = 3000 || process.env.PORT;
+const PORT = 3030 || process.env.PORT;
 const session = require("express-session");
+const cors = require("cors");
 
 // Configuración de public, src para todo el proyecto
 app.use(express.static("public"));
 // app.use(express.static("assets"));
 // app.use(express.static("src"));
 app.use(express.urlencoded({ extended: false }));
-//app.use(require("cors")());
+app.use(cors());
 
 //Rutas
 app.set("view engine", "ejs");
@@ -42,5 +43,5 @@ app.get("*", (req, res) => res.status(404).render("pagenotfound"));
 
 //Servidor
 app.listen(PORT, () => {
-  console.log("SERVIDOR CORRIENDO EN EL PUERTO 3000");
+  console.log("SERVIDOR CORRIENDO EN EL PUERTO 3030");
 });
