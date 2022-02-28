@@ -16,7 +16,11 @@ router.get(
   productController.findProductsMostWanted
 );
 router.get("/products", productController.getAllProducts);
+
 router.get("/productos", productController.getAllProductsApiRest);
+
+router.post("/product/new", productController.addProduct);
+
 router.get("/productos/:id", productController.findProductByIdApiRest);
 
 module.exports = router;

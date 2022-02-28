@@ -1,10 +1,14 @@
 const fetch = require("node-fetch");
-// let products = require("../database/products");
-const { response } = require("express");
-const { includes } = require("../middlewares/validarLoginMiddleware");
+// // let products = require("../database/products");
+// const { response } = require("express");
+// const { includes } = require("../middlewares/validarLoginMiddleware");
 const ProductModel = require("../models/ProductModel");
 
 module.exports = {
+  addProduct: (req, res) => {
+    res.send(req.body);
+  },
+
   findProducts: (req, res) => {
     fetch("https://dhfakestore.herokuapp.com/api/products")
       .then((response) => response.json())

@@ -27,6 +27,9 @@ const userRoute = require("./src/routes/userRoute");
 const productRoute = require("./src/routes/productRoute");
 const storeRoute = require("./src/routes/storeRoute");
 const cartRoute = require("./src/routes/cartRoute");
+const apiRoute = require("./src/routes/apiRoute");
+
+app.use("/productos", apiRoute);
 
 // INDEX
 app.use("/", mainRoute);
