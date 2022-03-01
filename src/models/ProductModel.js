@@ -1,5 +1,6 @@
 const fetch = require("node-fetch");
 const fs = require("fs");
+const { editProduct } = require("../controllers/productController");
 const URL = "https://dhfakestore.herokuapp.com/api/products/";
 // const path = require("path");
 
@@ -15,12 +16,54 @@ const Products = {
     return productos;
   },
 
-  addProductToApi: (id, nombre, valor, descripcion, stocks) => {
+  addProductToApi: (id, nombre, valor, descripcion, stocks, img, gallery) => {
     let productos = Products.leerJson();
     let valorToNumber = Number(valor),
       stocksToNumber = Number(stocks);
 
     let productAdded = {
+      gallery: gallery,
+      mostWanted: false,
+      stock: stocksToNumber,
+      store: null,
+      _id: id,
+      title: nombre,
+      price: valorToNumber,
+      description: descripcion,
+      image: img,
+      category: "Otros",
+      __v: 0,
+    };
+
+    productos.push(productAdded);
+
+    fs.writeFileSync(
+      Products.fileLocation,
+      JSON.stringify(productos, null, " ")
+    );
+  },
+
+  editProductToApi: (id, nombre, valor, descripcion, stocks) => {
+    let productos = Products.leerJson();
+    let productoEditado = productos.filter((producto) => producto._id == id);
+
+    let count = 0;
+    let finalCount;
+
+    productos.forEach((element) => {
+      if (element._id === "61a5b43231c8b5c118d10861") {
+        finalCount = count;
+      } else {
+        count++;
+      }
+    });
+
+    let productosRestantes = productos.filter((producto) => producto._id != id);
+
+    let valorToNumber = Number(valor),
+      stocksToNumber = Number(stocks);
+
+    productoEditado = {
       gallery: [],
       mostWanted: false,
       stock: stocksToNumber,
@@ -34,11 +77,23 @@ const Products = {
       __v: 0,
     };
 
-    productos.push(productAdded);
+    productosRestantes.splice(finalCount + 1, 0, productoEditado);
 
     fs.writeFileSync(
       Products.fileLocation,
-      JSON.stringify(productos, null, " ")
+      JSON.stringify(productosRestantes, null, " ")
+    );
+  },
+
+  deleteProductToApi: (id) => {
+    let productos = Products.leerJson();
+    const productoEliminado = productos.filter(
+      (producto) => producto._id != id
+    );
+
+    fs.writeFileSync(
+      Products.fileLocation,
+      JSON.stringify(productoEliminado, null, " ")
     );
   },
 

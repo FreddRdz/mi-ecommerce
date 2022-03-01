@@ -138,12 +138,12 @@
  {
   "gallery": [],
   "mostWanted": false,
-  "stock": 4,
+  "stock": 3,
   "store": null,
   "_id": "Z2b0YWtjla9ykmoCWG3yVv",
-  "title": "321",
-  "price": 3121,
-  "description": "31212",
+  "title": "Producto editado",
+  "price": 21412,
+  "description": "42334252",
   "image": null,
   "category": "Otros",
   "__v": 0
@@ -162,15 +162,25 @@
   "__v": 0
  },
  {
-  "gallery": [],
+  "gallery": [
+   [
+    "https://concepto.de/wp-content/uploads/2018/10/URL1-e1538664726127.jpg"
+   ],
+   [
+    "https://concepto.de/wp-content/uploads/2018/10/URL1-e1538664726127.jpg"
+   ],
+   [
+    "https://concepto.de/wp-content/uploads/2018/10/URL1-e1538664726127.jpg"
+   ]
+  ],
   "mostWanted": false,
-  "stock": 4,
+  "stock": null,
   "store": null,
-  "_id": "whAYLkTT4Xw0JrTi8GgP8h",
-  "title": "3244322",
-  "price": 24324,
-  "description": "42332",
-  "image": null,
+  "_id": "swfe7HkRHOn3aHZXr0IpnZ",
+  "price": null,
+  "image": [
+   "https://concepto.de/wp-content/uploads/2018/10/URL1-e1538664726127.jpg"
+  ],
   "category": "Otros",
   "__v": 0
  }

@@ -6,13 +6,28 @@ const ProductModel = require("../models/ProductModel");
 
 module.exports = {
   deleteProduct: (req, res) => {
-    res.send("Eliminar usuario");
+    res.send(req.body.id);
+    ProductModel.deleteProductToApi(req.body.id);
   },
-  addProduct: (req, res) => {
+  editProduct: (req, res) => {
     const { id, nombre, valor, descripcion, stocks } = req.body;
+    res.send("Editar producto");
+    ProductModel.editProductToApi(id, nombre, valor, descripcion, stocks);
+  },
+
+  addProduct: (req, res) => {
+    const { id, nombre, valor, descripcion, stocks, img, gallery } = req.body;
 
     res.send(req.body);
-    ProductModel.addProductToApi(id, nombre, valor, descripcion, stocks);
+    ProductModel.addProductToApi(
+      id,
+      nombre,
+      valor,
+      descripcion,
+      stocks,
+      img,
+      gallery
+    );
   },
 
   findProducts: (req, res) => {
