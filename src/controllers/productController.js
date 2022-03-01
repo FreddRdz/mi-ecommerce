@@ -21,6 +21,15 @@ module.exports = {
     // console.log(productToShow);
     res.render("productId", { productToShow });
   },
+  
+  findProductById: async (req, res) => {
+    let idProduct = req.params.id;
+    // console.log(idProduct);
+    const productToShow = await ProductModel.filterProductById(idProduct);
+    // console.log(productToShow);
+    res.render("productId", { productToShow });
+  },
+
 
   //PRODUCTOS SUGERIDOS//              //url para esta función =>   /products/api/product/suggested
   findProductsSuggested: async (req, res) => {

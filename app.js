@@ -40,6 +40,8 @@ app.use("/", mainRoute);
 app.use("/users", userRoute);
 app.use("/", storeRoute);
 app.use("/cart", cartRoute);
+app.use(express.json())
+
 
 //Checkout
 app.get("/checkout", (req, res) => res.render("checkout"));

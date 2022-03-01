@@ -16,15 +16,4 @@ window.addEventListener("load", function () {
   let button = document.querySelector(".theme");
   let valor = true;
 
-  button.addEventListener("click", (e) => {
-    if (valor) {
-      valor = false;
-      menu.style.backgroundColor = "blue";
-      console.log(valor);
-    } else {
-      valor = true;
-      menu.style.backgroundColor = "gray";
-      console.log(valor);
-    }
-  });
 });
