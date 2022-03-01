@@ -138,12 +138,12 @@
  {
   "gallery": [],
   "mostWanted": false,
-  "stock": 3,
+  "stock": 6,
   "store": null,
-  "_id": "Z2b0YWtjla9ykmoCWG3yVv",
-  "title": "Producto editado",
-  "price": 21412,
-  "description": "42334252",
+  "_id": "oGotqahiRwLtQ1P3HBIWHB",
+  "title": "Isaias",
+  "price": 124412124,
+  "description": "Es un buen compaeñero, le pongo un oxxo",
   "image": null,
   "category": "Otros",
   "__v": 0
@@ -153,10 +153,10 @@
   "mostWanted": false,
   "stock": 2,
   "store": null,
-  "_id": "oGotqahiRwLtQ1P3HBIWHB",
-  "title": "312",
-  "price": 214412,
-  "description": "312241",
+  "_id": "Z2b0YWtjla9ykmoCWG3yVv",
+  "title": "Guillermo",
+  "price": 12312231,
+  "description": "312421421",
   "image": null,
   "category": "Otros",
   "__v": 0
@@ -180,6 +180,31 @@
   "price": null,
   "image": [
    "https://concepto.de/wp-content/uploads/2018/10/URL1-e1538664726127.jpg"
+  ],
+  "category": "Otros",
+  "__v": 0
+ },
+ {
+  "gallery": [
+   [
+    "https://coca-colafemsa.com/wp-content/uploads/2019/11/1.png"
+   ],
+   [
+    "https://coca-colafemsa.com/wp-content/uploads/2019/11/1.png"
+   ],
+   [
+    "https://coca-colafemsa.com/wp-content/uploads/2019/11/1.png"
+   ]
+  ],
+  "mostWanted": false,
+  "stock": 6,
+  "store": null,
+  "_id": "cvwwhlNmnVh9uoYKi66mqq",
+  "title": "Coca cola 600mL",
+  "price": 24,
+  "description": "Coca cola de 500ml",
+  "image": [
+   "https://coca-colafemsa.com/wp-content/uploads/2019/11/1.png"
   ],
   "category": "Otros",
   "__v": 0
