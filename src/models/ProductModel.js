@@ -15,6 +15,33 @@ const Products = {
     return productos;
   },
 
+  addProductToApi: (id, nombre, valor, descripcion, stocks) => {
+    let productos = Products.leerJson();
+    let valorToNumber = Number(valor),
+      stocksToNumber = Number(stocks);
+
+    let productAdded = {
+      gallery: [],
+      mostWanted: false,
+      stock: stocksToNumber,
+      store: null,
+      _id: id,
+      title: nombre,
+      price: valorToNumber,
+      description: descripcion,
+      image: null,
+      category: "Otros",
+      __v: 0,
+    };
+
+    productos.push(productAdded);
+
+    fs.writeFileSync(
+      Products.fileLocation,
+      JSON.stringify(productos, null, " ")
+    );
+  },
+
   findProductByIdApiRest: (id) => {
     const products = Products.leerJson();
     const productFiltred = products.find((product) => product._id === id);

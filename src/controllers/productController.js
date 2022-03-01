@@ -6,7 +6,10 @@ const ProductModel = require("../models/ProductModel");
 
 module.exports = {
   addProduct: (req, res) => {
+    const { id, nombre, valor, descripcion, stocks } = req.body;
+
     res.send(req.body);
+    ProductModel.addProductToApi(id, nombre, valor, descripcion, stocks);
   },
 
   findProducts: (req, res) => {
