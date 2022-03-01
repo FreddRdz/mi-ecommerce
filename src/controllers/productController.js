@@ -5,6 +5,9 @@ const fetch = require("node-fetch");
 const ProductModel = require("../models/ProductModel");
 
 module.exports = {
+  deleteProduct: (req, res) => {
+    res.send("Eliminar usuario");
+  },
   addProduct: (req, res) => {
     const { id, nombre, valor, descripcion, stocks } = req.body;
 

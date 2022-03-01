@@ -21,6 +21,8 @@ router.get("/productos", productController.getAllProductsApiRest);
 
 router.post("/product/new", productController.addProduct);
 
+router.delete("/products/delete", productController.deleteProduct);
+
 router.get("/productos/:id", productController.findProductByIdApiRest);
 
 module.exports = router;
